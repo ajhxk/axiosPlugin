@@ -26,23 +26,9 @@ export const debounce = (func, wait, isImmediate) => {
   }
 }
 
-export const debounce2 = (func, wait) => {
-  let timeout
-  return function () {
-    let context = this
-    let args = arguments
-
-    if (timeout) clearTimeout(timeout)
-
-    let callNow = !timeout
-    timeout = setTimeout(() => {
-      timeout = null
-    }, wait)
-
-    if (callNow) func.apply(context, args)
-  }
-}
+export const ignoreUrlQuery = url => url.split('?')[0]
 
 export default {
-  debounce
+  debounce,
+  ignoreUrlQuery
 }

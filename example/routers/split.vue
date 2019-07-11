@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import {do1} from '../api'
+import {do1, do2, do3, do4} from '../api'
+
 export default {
   name: 'split_pane_page',
   data () {
@@ -16,7 +17,19 @@ export default {
     }
   },
   mounted () {
-    do1()
+    let len = 10
+    for (let i = 0; i < len; i++) {
+      do1().then(res => {
+        console.log(`do1 time ${i} ok res is `, res)
+      })
+      do2().then(res => {
+        console.log(`do2 time ${i} ok res is `, res)
+      })
+      do3().then(res => {
+        console.log(`do3 time ${i} ok res is `, res)
+      })
+    }
+    do4()
   },
   methods: {
     handleMoving (e) {

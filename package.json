@@ -68,6 +68,8 @@
   },
   "repository": {
     "type": "git",
+    "url": "git@git.guahao-inc.com:ai-open-source/ai-axios.git"
   },
+  "author": "JanathonJiang <qinghuangniao@gmail.com>",
   "license": "ISC"
 }

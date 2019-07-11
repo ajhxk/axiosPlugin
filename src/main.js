@@ -1,8 +1,9 @@
-import debounceHandle from './debounceHandle'
+import {requestInject} from './requestInjection/index'
+import {injectResponseInterceptor} from './responseInterceptor'
 
 export const injection = (axios = {}) => {
-  const Axios = axios.Axios
-  debounceHandle(Axios)
+  requestInject(axios)
+  injectResponseInterceptor(axios)
 }
 
 export default {injection}
