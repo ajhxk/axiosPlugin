@@ -1,23 +1,29 @@
-// import axios from 'axios'
-import axios from '../static/axios'
-import {injection} from '../src/main'
-// import {injection} from '../dist/static/js/ai-axios'
-injection(axios)
+import axios from './common/axios';
 
-export const do1 = () => axios.get('http://yapi.med.guahao-inc.com/mock/587/cockpit/zhuyuan?a=1&b=1', {
-  debounce: {isActive: true}
-})
+export const testergetPlace = () => axios.get('/tester/getPlace', { debounce: { isActive: false } });
+export const testergetPlace1 = () => axios.get('/tester/getPlace1', { debounce: { isActive: false } });
+export const testergetPlace2 = () => axios.get('/tester/getPlace2', { debounce: { isActive: false } });
+export const testergetPlace3 = () => axios.get('/tester/getPlace3', { debounce: { isActive: false } });
+export const testerpostPlace = () => axios.post('/tester/postPlace', { a: 1 }, { debounce: { isActive: false } });
+export const testererr401 = () => axios.get('/tester/err401', { debounce: { isActive: false } });
 
-export const do2 = () => axios.get('http://yapi.med.guahao-inc.com/mock/587/cockpit/summary?a=1&b=1', {
-  debounce: {isIgnoreQuery: true}
-})
+export const tester2Upload = () => axios.post('/tester2/upload', { a: 1 }, { debounce: { isActive: false } });
+export const tester2Upload1 = () => axios.post('/tester2/upload1', { a: 1 }, { debounce: { isActive: false } });
+export const tester2Upload2 = () => axios.post('/tester2/upload2', { a: 1 }, { debounce: { isActive: false } });
+export const tester2Upload3 = () => axios.post('/tester2/upload3', { a: 1 }, { debounce: { isActive: false } });
+export const tester2getupload = () => axios.get('/tester2/getupload', { debounce: { isActive: false }, params: { a: 1 } });
 
-export const do3 = () => axios.post('http://yapi.med.guahao-inc.com/mock/587/groupfeedback',
-  {typejj: 0, statusfk: 1, number: 2},
-  {
-    debounce: {isIgnoreQuery: true, isActive: true}
-  })
+export default {
+  testergetPlace,
+  testergetPlace1,
+  testergetPlace2,
+  testergetPlace3,
+  testerpostPlace,
+  testererr401,
 
-export const do4 = () => axios.post('http://22yapi.med.guahao-inc.com/mock/5899/groupfeedback1',
-  {typejj: 0, statusfk: 1, number: 2}
-)
+  tester2Upload,
+  tester2Upload1,
+  tester2Upload2,
+  tester2Upload3,
+  tester2getupload,
+};

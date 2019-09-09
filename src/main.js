@@ -1,9 +1,9 @@
-import {requestInject} from './requestInjection/index'
-import {injectResponseInterceptor} from './responseInterceptor'
+import configModule from './config';
+import { inject } from './inject';
 
-export const injection = (axios = {}) => {
-  requestInject(axios)
-  injectResponseInterceptor(axios)
-}
+const aiAxios = ({ axios, config } = {}) => {
+  configModule.init(config);
+  inject(axios);
+};
 
-export default {injection}
+export default aiAxios;

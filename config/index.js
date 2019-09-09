@@ -10,7 +10,21 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/users/getUserInfo': {
+        target: 'http://172.28.65.233:3000',
+				// changeOrigin: true
+      },
+      '/tester': {
+        target: 'http://172.28.65.233:3000',
+      },
+      '/tester2': {
+        target: 'http://172.28.65.233:3000',
+      },
+      '/token': {
+        target: 'http://172.28.65.233:3000',
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

@@ -3,7 +3,7 @@
         <nav>
             <ul>
                 <li v-for="route in routes" :key="route.path">
-                  <router-link :to="route.path">{{route.path}}</router-link>
+                  <router-link :to="route.path">ai-axios</router-link>
                 </li>
             </ul>
         </nav>
@@ -11,12 +11,12 @@
     </div>
 </template>
 <script>
-import routes from './routers'
+import routes from './routers';
 export default {
   data: function () {
     return {
-      routes
-    }
+      routes,
+    };
   },
   mounted: function () {
 
@@ -26,6 +26,6 @@ export default {
   },
   methods: {
 
-  }
-}
+  },
+};
 </script>

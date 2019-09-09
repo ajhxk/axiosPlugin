@@ -1,10 +1,10 @@
 const getRoutes = () => [
   {
     path: '/split',
-    component: (resolve) => require(['./split.vue'], resolve)
-  }
-]
+    component: (resolve) => require(['./split.vue'], resolve),
+  },
+];
 
-export const routes = getRoutes()
+export const routes = getRoutes();
 
-export default routes
+export default routes;
