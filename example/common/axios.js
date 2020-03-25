@@ -14,14 +14,15 @@ const aiAxiosConf = {
   tokenParams: {
     url: '/token/getToken',
     keyName: 'asses_token',
-    getTokenFromResponse: ({ data = {} } = { data: {} }) => {
+    getTokenFromResponse: (data = { }) => {
       return data['asses_token'];
     },
   },
   tokenInject: {
     isActive: true,
     // header
-    injectPlace: 'header',
+    // injectPlace: 'header',
+    injectPlace: 'params',
   },
   tokenConnect: {
     isActive: true,
@@ -30,7 +31,7 @@ const aiAxiosConf = {
 };
 
 aiAxios({ axios, config: aiAxiosConf });
-// requestHandle(axios);
+requestHandle(axios);
 responseHandle(axios);
 
 export default axios;

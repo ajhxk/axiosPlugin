@@ -1,5 +1,5 @@
 let TOKEN = null;
-const TOKEN_HEADER = 'token_';
+const TOKEN_HEADER = 'asses_token';
 const UNTOKEN_TIME = 10 * 1000;
 
 const initToken = () => {
@@ -35,9 +35,9 @@ const getToken = () => {
   return TOKEN;
 };
 
-const getTokenResKey = () => 'asses_token';
+const getTokenResKey = () => TOKEN_HEADER;
 
-const getTokenKey = () => 'asses_token';
+const getTokenKey = () => TOKEN_HEADER;
 
 module.exports = {
   initToken,

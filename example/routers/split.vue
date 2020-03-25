@@ -34,7 +34,7 @@ export default {
       api
         .testererr401()
         .then(
-          res => console.log('res:', res.data.data),
+          res => console.log('res:', res.data),
           err => console.log('err:', err.response.data)
         );
     },
@@ -42,7 +42,7 @@ export default {
       api
         .testergetPlace()
         .then(
-          res => console.log('res:', res.data.data),
+          res => console.log('res:', res.data),
           err => console.log('err:', err.response.data)
         );
     },
@@ -50,7 +50,7 @@ export default {
       api
         .testerpostPlace()
         .then(
-          res => console.log('res:', res.data.data),
+          res => console.log('res:', res.data),
           err => console.log('err:', err.response.data)
         );
     },
@@ -58,43 +58,43 @@ export default {
       api
         .testergetPlace()
         .then(
-          res => console.log('res:', res.data.data),
+          res => console.log('res:', res.data),
           err => console.log('err:', err.response.data)
         );
       api
         .testergetPlace1()
         .then(
-          res => console.log('res:', res.data.data),
+          res => console.log('res:', res.data),
           err => console.log('err:', err.response.data)
         );
       api
         .testergetPlace2()
         .then(
-          res => console.log('res:', res.data.data),
+          res => console.log('res:', res.data),
           err => console.log('err:', err.response.data)
         );
       api
         .testergetPlace3()
         .then(
-          res => console.log('res:', res.data.data),
+          res => console.log('res:', res.data),
           err => console.log('err:', err.response.data)
         );
     },
     dotester2Upload () {
       api.tester2Upload()
-        .then(res => console.log('res', res.data.data), err => console.log('err', err.response.data));
+        .then(res => console.log('res', res.data), err => console.log('err', err.response.data));
     },
     dotester2getupload () {
       api.tester2getupload()
-        .then(res => console.log('res', res.data.data), err => console.log('err', err.response.data));
+        .then(res => console.log('res', res.data), err => console.log('err', err.response.data));
     },
     dotester2Uploads () {
       api.tester2Upload1()
-        .then(res => console.log('res', res.data.data), err => console.log('err', err.response.data));
+        .then(res => console.log('res', res.data), err => console.log('err', err.response.data));
       api.tester2Upload2()
-        .then(res => console.log('res', res.data.data), err => console.log('err', err.response.data));
+        .then(res => console.log('res', res.data), err => console.log('err', err.response.data));
       api.tester2Upload3()
-        .then(res => console.log('res', res.data.data), err => console.log('err', err.response.data));
+        .then(res => console.log('res', res.data), err => console.log('err', err.response.data));
     },
   },
 };

@@ -1,7 +1,6 @@
 export const requestHandle = axios => {
   axios.interceptors.request.use(
     conf => {
-      console.log('private:', conf);
       return conf;
     }, err => Promise.reject(err)
   );
