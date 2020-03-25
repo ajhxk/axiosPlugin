@@ -89,5 +89,7 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "keywords": ["ai-axios"]
+  "keywords": [
+    "ai-axios"
+  ]
 }
