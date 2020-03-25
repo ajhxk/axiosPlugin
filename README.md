@@ -1,17 +1,18 @@
 # ai-axios
 
-在axios v0.18.0的基础上，根据sdk的需求，增加了部分功能。
 
 ## 改造如下
 
 1. 自动获取token，并将在token获取前发出的请求，存储起来，等token成功获取后再次请求；
 2. 做防抖处理，在200ms内相同的请求会被合并成一个；
-3. 防抖全局配置
+3. 接口超时时，可以配置接口重连
 
-## Install
+## dev
 ```shell
-npm i -S ai-axios;
-// 暂时未发布npm
+启动接口服务：
+npm run server
+启动开发环境：
+npm run dev
 ```
 
 ## Quick Start
