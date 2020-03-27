@@ -4,8 +4,8 @@
 ## 改造如下
 
 1. 自动获取token，并将在token获取前发出的请求，存储起来，等token成功获取后再次请求；
-2. 做防抖处理，在200ms内相同的请求会被合并成一个；
-3. 接口超时时，可以配置接口重连
+2. 做防抖处理，在200ms(时间可配)内相同的请求会被合并成一个；
+3. 接口超时时，自动更新token，并且重连接口
 
 ## dev
 ```shell
@@ -104,4 +104,3 @@ axios({method: 'post',url: '/user/12345', debounce: {isIgnoreQuery: false}});
 axios.get('/aaa', {debounce: {isIgnoreQuery: false}})
 axios.post('/aaa',params,{debounce: {isIgnoreQuery: false}})
 ```
-
